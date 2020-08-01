@@ -1,15 +1,10 @@
-data1 = ['João', 'Maria', 'Pelé']
-data2 = ['Vagner', 'Djalma', 'João', 'Maria', 'Agenor', 'Pelé']
-data_copy2 = data2
-
+data1 = [20,30,40,40,30,50,60,50]
+data_copy = []
 for el in data1:
-     if el in data_copy2:
-         data_copy2.remove(el)
-print(data_copy2)
+    if el not in data_copy:
+        data_copy.append(el)
+print(data_copy) # [20, 30, 40, 50, 60]
 
-
-data1 = ['João','Maria','Pelé']
-data2 = ['Vagner','Djalma','João','Maria','Agenor','Pelé']
-set1, set2 = set(data1), set(data2)
-printList = list(set1.symmetric_difference(set2))
-print(printList)
+data1 = [20,30,40,40,30,50,60,50]
+list_set = list(set(data1))
+print(list_set) # [40, 50, 20, 60, 30]
