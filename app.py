@@ -1,10 +1,10 @@
-data1 = [20,30,40,40,30,50,60,50]
-data_copy = []
-for el in data1:
-    if el not in data_copy:
-        data_copy.append(el)
-print(data_copy) # [20, 30, 40, 50, 60]
+def split_list_in_half(any_list):
+    half = len(any_list)//2
+    return any_list[:half], any_list[half:]
 
-data1 = [20,30,40,40,30,50,60,50]
-list_set = list(set(data1))
-print(list_set) # [40, 50, 20, 60, 30]
+values = [1,2,3,4,5,6,7,8]
+one, two = split_list_in_half(values)
+
+print(one) # [1, 2, 3, 4]
+
+print(two) # [5, 6, 7, 8]
